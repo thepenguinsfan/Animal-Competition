@@ -6,6 +6,8 @@ public abstract class Animal{
 
   public abstract int numberOfEyes();
 
+  public abstract boolean hasClaws();
 
+  public abstract boolean hasTail();
   
 }
