@@ -8,3 +8,4 @@
 > Animals are put into a forest and will have to hunt for food. Certain animal traits will determine how an animal can hunt, and the winner.
 
 > Animals are put into an environment during a certain time(day/night) and the time will either strengthen or weaken certain traits of animals.
+
