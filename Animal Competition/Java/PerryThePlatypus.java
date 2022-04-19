@@ -24,19 +24,19 @@ public class PerryThePlaypus extends CoolAnimals implements ITraits{
     return true;
   }
 
-  public boolean canClimb(){
-    return true;
+  public int canClimb(){
+    return 95;
   }
 
-  public boolean canFly(){
-    return false;
+  public int canFly(){
+    return 75;
   }
 
-  public boolean canSwim(){
-    return true;
+  public int canSwim(){
+    return 100;
   }
 
-  public boolean canRun(){
-    return true;
+  public int canRun(){
+    return 100;
   }
 }

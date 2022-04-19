@@ -20,19 +20,19 @@ public class Cheetah extends Animal implements Itraits {
     return true;
   }
 
-  public boolean canClimb(){
-    return true;
+  public int canClimb(){
+    return 60;
   }
 
-  public boolean canFly(){
-    return false;
+  public int canFly(){
+    return 0;
   }
 
-  public boolean canSwim(){
-    return true;
+  public int canSwim(){
+    return 80 ;
   }
 
-  public boolean canRun(){
-    return true;
+  public int canRun(){
+    return 100;
   }
 }

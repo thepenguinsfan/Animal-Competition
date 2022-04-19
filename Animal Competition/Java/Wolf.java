@@ -20,19 +20,19 @@ public class Wolf extends Animal implements Itraits {
     return true;
   }
 
-  public boolean canClimb(){
-    return false;
+  public int canClimb(){
+    return 20;
   }
 
-  public boolean canFly(){
-    return false;
+  public int canFly(){
+    return 0;
   }
 
-  public boolean canSwim(){
-    return true;
+  public int canSwim(){
+    return 85;
   }
 
-  public boolean canRun(){
-    return true;
+  public int canRun(){
+    return 70;
   }
 }

@@ -31,17 +31,8 @@ public class Forest extends Environment {
     return true;
   }
 
-  public boolean isHot(){
-    return true;
-  }
-
-  public boolean isCold(){
-    return true;
-  }
-  
-
-  public boolean isWarm(){
-    return true;
+  public int temperatureInCelsius(){
+    return 15;
   }
   
 }

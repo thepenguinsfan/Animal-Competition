@@ -14,10 +14,6 @@ public abstract class Environment {
 
   public abstract boolean hasFood();
 
-  public abstract boolean isHot();
-
-  public abstract boolean isCold();
-
-  public abstract boolean isWarm();
+  public abstract int temperatureInCelsius();
   
 }

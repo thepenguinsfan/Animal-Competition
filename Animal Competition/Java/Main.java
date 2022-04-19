@@ -7,6 +7,14 @@ class Main {
     String greeting = "Hello! Welcome to (insert name here)!";
 
     System.out.println(greeting);
+
+    Scanner playerNumber = new Scanner(System.in);
+
+    System.out.println("Press 1 for singleplayer. Press 2 for two players.")
+    // still working on this
+    int numberOfPlayers = playerNumber.nextInt();
+
+    
     // makes a new scanner to scan for user input
     Scanner userNameInput = new Scanner(System.in);
     // prompts user for username

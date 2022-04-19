@@ -28,16 +28,8 @@ public class Desert extends Environment {
     return true;
   }
 
-  public boolean isHot(){
-    return true;
-  }
-
-  public boolean isCold(){
-    return false;
-  }
-
-  public boolean isWarm(){
-    return false;
+  public int temperatureInCelsius(){
+    return 40;
   }
   
 }

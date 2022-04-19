@@ -1,12 +1,12 @@
 public abstract interface ITraits {
 
-  public abstract boolean canClimb();
+  public abstract int canClimb();
 
-  public abstract boolean canFly();
+  public abstract int canFly();
 
-  public abstract boolean canSwim();
+  public abstract int canSwim();
 
-  public abstract boolean canRun();
+  public abstract int canRun();
 
  
 

@@ -28,19 +28,19 @@ public class Snake extends Reptile implements Itraits {
     return true;
   }
 
-  public boolean canClimb(){
-    return true;
+  public int canClimb(){
+    return 50;
   }
 
-  public boolean canFly(){
-    return false;
+  public int canFly(){
+    return 0;
   }
 
-  public boolean canSwim(){
-    return true;
+  public int canSwim(){
+    return 100;
   }
 
-  public boolean canRun(){
-    return false;
+  public int canRun(){
+    return 20;
   }
 }
