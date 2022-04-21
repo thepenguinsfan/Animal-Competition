@@ -1,31 +1,31 @@
 public class Desert extends Environment {
 
-  public boolean hasTrees(){
-    return false;
+  public int percentageOfTrees(){
+    return 5;
   }
 
-  public boolean hasWater(){
-    return true;
+  public int percentageOfWater(){
+    return 5;
   }
 
-  public boolean hasGrass(){
-    return false;
+  public int percentageOfGrass(){
+    return 1;
   }
 
-  public boolean hasSand(){
-    return true;
+  public int percentageOfSand(){
+    return 95;
   }
 
-  public boolean hasPlants(){
-    return false;
+  public int percentageOfPlants(){
+    return 4;
   }
 
-  public boolean hasOtherAnimals(){
-    return true;
+  public int otherAnimalsPercentage(){
+    return ;
   }
 
-  public boolean hasFood(){
-    return true;
+  public int percentageOfFood(){
+    return ;
   }
 
   public int temperatureInCelsius(){

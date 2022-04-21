@@ -24,19 +24,19 @@ public class PerryThePlaypus extends CoolAnimals implements ITraits{
     return true;
   }
 // Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
-  public int canClimb(){
+  public int climbingAbilityRating(){
     return 95;
   }
 // Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
-  public int canFly(){
+  public int flyingAbilityRating(){
     return 75;
   }
 // Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
-  public int canSwim(){
+  public int swimmingAbilityRating(){
     return 100;
   }
 // Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
-  public int canRun(){
+  public int runningAbilityRating(){
     return 100;
   }
 }

@@ -37,7 +37,11 @@ class Main {
     // next part of game, will work on 
       if (userGameStart == 1) {
         System.out.println("Select your Animal:");
+        
     }
+
+
+      
     } else if (numberOfPlayers == 2){
       
       System.out.println("Welcome!");
@@ -65,6 +69,9 @@ class Main {
       if (userGameStart == 1) {
         System.out.println("Select your Animal:");
     }
+
+
+      
     }
     }
     

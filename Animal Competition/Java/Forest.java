@@ -1,26 +1,25 @@
 public class Forest extends Environment {
 
-  public boolean hasTrees(){
-    return true;
+  public int percentageOfTrees(){
+    return 99;
   }
 
-  public boolean hasWater(){
-    return true;
+  public int percentageOfWater(){
+    return 80;
   }
      
 
-  public boolean hasGrass(){
-    return true;
+  public int percentageOfGrass(){
+    return 90;
   }
 
 
-  public boolean hasSand(){
-    return true;
+  public int percentageOfSand(){
+    return 20;
   }
 
-
-  public boolean hasPlants(){
-    return true;
+  public int percentageOfPlants(){
+    return 85;
   }
 
   public boolean hasOtherAnimals(){

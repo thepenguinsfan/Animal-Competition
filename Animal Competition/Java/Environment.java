@@ -1,18 +1,18 @@
-public abstract class Environment {
+  public abstract class Environment {
+// The factors in the environments are given a rating from 0-100. 0 being the factor is not present in the given environment, and 100 being the factor is present everywhere in the environment
+  public abstract int percentageOfTrees();
 
-  public abstract boolean hasTrees();
+  public abstract int percentageOfWater();
 
-  public abstract boolean hasWater();
+  public abstract int percentageOfGrass();
 
-  public abstract boolean hasGrass();
+  public abstract int percentageOfSand();
 
-  public abstract boolean hasSand();
+  public abstract int percentageOfPlants();
 
-  public abstract boolean hasPlants();
+  public abstract int otherAnimalsPercentage();
 
-  public abstract boolean hasOtherAnimals();
-
-  public abstract boolean hasFood();
+  public abstract int percentageOfFood();
 
   public abstract int temperatureInCelsius();
   

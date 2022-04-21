@@ -1,12 +1,12 @@
 public abstract interface ITraits {
 
-  public abstract int canClimb();
+  public abstract int climbingAbilityRating();
 
-  public abstract int canFly();
+  public abstract int flyingAbilityRating();
 
-  public abstract int canSwim();
+  public abstract int swimmingAbilityRating();
 
-  public abstract int canRun();
+  public abstract int runningAbilityRating();
 
  
 
