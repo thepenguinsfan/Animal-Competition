@@ -1,11 +1,11 @@
-public class Cheetah extends Animal implements Itraits {
+public class Cheetah extends Animal implements ITraits {
 
   public int numberOfLegs() {
     return 4;
   }
   
-  public string species() {
-    return "Wildcat";
+  public String species() {
+    return "Cheetah";
   }
 
   public int numberOfEyes() {
@@ -19,19 +19,18 @@ public class Cheetah extends Animal implements Itraits {
   public boolean hasTail() {
     return true;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
+  
+    
   public int climbingAbilityRating(){
     return 60;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int flyingAbilityRating(){
     return 0;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int swimmingAbilityRating(){
     return 80 ;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
+
   public int runningAbilityRating(){
     return 100;
   }

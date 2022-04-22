@@ -1,10 +1,10 @@
-public class Snake extends Reptile implements Itraits {
+ public class Snake extends Reptile implements ITraits {
 
   public int numberOfLegs() {
     return 0;
   }
   
-  public string species() {
+  public String species() {
     return "Snake";
   }
 
@@ -20,6 +20,7 @@ public class Snake extends Reptile implements Itraits {
     return true;
   }
 
+
   public boolean isColdBlooded() {
     return true;
   }
@@ -27,19 +28,15 @@ public class Snake extends Reptile implements Itraits {
   public boolean hasScales() {
     return true;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int climbingAbilityRating(){
     return 50;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int flyingAbilityRating(){
     return 0;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int swimmingAbilityRating(){
     return 100;
   }
-// Animals abilities are rated on a scale from 0-100 where 0 is they can't do it and 100 being that they excell at it.
   public int runningAbilityRating(){
     return 20;
   }

@@ -9,3 +9,11 @@
 
 > Animals are put into an environment during a certain time(day/night) and the time will either strengthen or weaken certain traits of animals.
 
+**How it will work**
+1. Randomly select Environment(Forest, Desert)
+2. Randomly select a situation
+3. If situation = a and environment = b, then compare the selected Animals’ traits x, y, z.
+4. If Animal(1or2)’s trait x> Animal(1or2)’s trait x, give Animal(1or2) 1 point
+5. Compare Animal traits’ y, z, giving points to who has the stronger trait
+6. Declare Animal(1or2) winner if Animal(1or2)’s points>Animal(1or2)’s points
+
