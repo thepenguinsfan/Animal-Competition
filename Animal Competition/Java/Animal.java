@@ -10,4 +10,5 @@ public abstract class Animal{
 
   public abstract boolean hasTail();
 
+  
 }

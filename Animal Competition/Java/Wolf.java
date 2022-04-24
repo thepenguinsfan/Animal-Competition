@@ -19,7 +19,9 @@ public class Wolf extends Animal implements ITraits {
   public boolean hasTail() {
     return true;
   }
-    
+
+  
+  
   public int climbingAbilityRating(){
     return 20;
   }

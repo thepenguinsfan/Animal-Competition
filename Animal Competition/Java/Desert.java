@@ -1,5 +1,9 @@
 public class Desert extends Environment {
 
+  public String environmentType(){
+    return "Desert";
+  }
+
   public int percentageOfTrees(){
     return 5;
   }
@@ -21,11 +25,11 @@ public class Desert extends Environment {
   }
 
   public int otherAnimalsPercentage(){
-    return ;
+    return 10;
   }
 
   public int percentageOfFood(){
-    return ;
+    return 8;
   }
 
   public int temperatureInCelsius(){

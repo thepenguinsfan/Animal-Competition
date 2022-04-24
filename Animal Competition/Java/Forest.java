@@ -1,11 +1,15 @@
 public class Forest extends Environment {
 
+  public String environmentType(){
+    return "Forest";
+  }
+
   public int percentageOfTrees(){
-    return 99;
+    return 90;
   }
 
   public int percentageOfWater(){
-    return 80;
+    return 85;
   }
      
 
@@ -15,19 +19,19 @@ public class Forest extends Environment {
 
 
   public int percentageOfSand(){
-    return 20;
+    return 10;
   }
 
   public int percentageOfPlants(){
     return 85;
   }
 
-  public boolean hasOtherAnimals(){
-    return true;
+  public int otherAnimalsPercentage(){
+    return 95;
   }
   
-  public boolean hasFood(){
-    return true;
+  public int percentageOfFood(){
+    return 80;
   }
 
   public int temperatureInCelsius(){

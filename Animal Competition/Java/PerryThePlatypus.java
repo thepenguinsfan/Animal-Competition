@@ -20,7 +20,6 @@ public class PerryThePlatypus extends CoolAnimals implements ITraits{
     return true;
   }
 
- 
   
   public boolean fightsCrime(){
     return true;

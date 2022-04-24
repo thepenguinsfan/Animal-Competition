@@ -20,7 +20,6 @@
     return true;
   }
 
-
   public boolean isColdBlooded() {
     return true;
   }
