@@ -1,11 +1,11 @@
-public class Cheetah extends Animal{
+public class Fox extends Animal{
 
   public int numberOfLegs() {
     return 4;
   }
   
   public String species() {
-    return "Cheetah";
+    return "Fox";
   }
 
   public int numberOfEyes() {
@@ -19,24 +19,23 @@ public class Cheetah extends Animal{
   public boolean hasTail() {
     return true;
   }
-    
+  
   public int climbingAbilityRating(){
-    return 60;
+    return 85;
   }
   public int flyingAbilityRating(){
     return 0;
   }
   public int swimmingAbilityRating(){
-    return 80 ;
+    return 80;
   }
-
   public int runningAbilityRating(){
-    return 99;
+    return 78;
   }
    public int burrowingAbilityRating(){
-    return 20;
+    return 90;
   }
   public int attackingAbilityRating(){
-    return 97;
+    return 85;
   }
 }

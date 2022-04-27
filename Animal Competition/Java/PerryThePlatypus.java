@@ -1,4 +1,4 @@
-public class PerryThePlatypus extends CoolAnimals implements ITraits{
+public class PerryThePlatypus extends CoolAnimals{
     
   public int numberOfLegs() {
     return 4;
@@ -20,10 +20,6 @@ public class PerryThePlatypus extends CoolAnimals implements ITraits{
     return true;
   }
 
-  
-  public boolean fightsCrime(){
-    return true;
-  }
   public int climbingAbilityRating(){
     return 95;
   }
@@ -36,4 +32,14 @@ public class PerryThePlatypus extends CoolAnimals implements ITraits{
   public int runningAbilityRating(){
     return 100;
   }
+   public int burrowingAbilityRating(){
+    return 95;
+  }
+  public int attackingAbilityRating(){
+    return 100;
+  }
+  public boolean fightsCrime(){
+    return true;
+  }
+  
 }

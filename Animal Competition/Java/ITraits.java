@@ -9,8 +9,8 @@ public abstract interface ITraits {
 
   public abstract int runningAbilityRating();
 
- 
+  public abstract int burrowingAbilityRating();
 
-  
-  
+  public abstract int attackingAbilityRating();
+    
 }

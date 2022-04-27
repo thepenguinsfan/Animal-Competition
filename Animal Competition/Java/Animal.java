@@ -1,4 +1,5 @@
-public abstract class Animal{
+
+public abstract class Animal implements ITraits{
 
   public abstract int numberOfLegs();
 
@@ -9,6 +10,18 @@ public abstract class Animal{
   public abstract boolean hasClaws();
 
   public abstract boolean hasTail();
+
+  public abstract int climbingAbilityRating();
+
+  public abstract int flyingAbilityRating();
+
+  public abstract int swimmingAbilityRating();
+
+  public abstract int runningAbilityRating();
+
+  public abstract int burrowingAbilityRating();
+  
+  public abstract int attackingAbilityRating(); 
 
   
 }

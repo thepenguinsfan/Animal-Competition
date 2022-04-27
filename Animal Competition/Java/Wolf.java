@@ -1,4 +1,4 @@
-public class Wolf extends Animal implements ITraits {
+public class Wolf extends Animal{
 
   public int numberOfLegs() {
     return 4;
@@ -19,8 +19,6 @@ public class Wolf extends Animal implements ITraits {
   public boolean hasTail() {
     return true;
   }
-
-  
   
   public int climbingAbilityRating(){
     return 20;
@@ -32,6 +30,13 @@ public class Wolf extends Animal implements ITraits {
     return 85;
   }
   public int runningAbilityRating(){
+    return 82;
+  }
+  public int burrowingAbilityRating(){
     return 70;
   }
+  public int attackingAbilityRating(){
+    return 90;
+  }
+  
 }
