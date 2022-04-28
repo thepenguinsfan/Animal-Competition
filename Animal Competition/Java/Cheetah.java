@@ -39,4 +39,10 @@ public class Cheetah extends Animal{
   public int attackingAbilityRating(){
     return 97;
   }
+  public int smellingAbilityRating(){
+    return 85;
+  }
+  public int visionAbilityRating(){
+    return 80;
+  }
 }

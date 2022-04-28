@@ -38,4 +38,10 @@ public class Fox extends Animal{
   public int attackingAbilityRating(){
     return 85;
   }
+  public int smellingAbilityRating(){
+    return 80;
+  }
+  public int visionAbilityRating(){
+    return 80;
+  }
 }

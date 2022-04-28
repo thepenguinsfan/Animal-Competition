@@ -39,4 +39,10 @@ public class Caracal extends Animal{
   public int attackingAbilityRating(){
     return 90;
   }
+  public int smellingAbilityRating(){
+    return 80;
+  }
+  public int visionAbilityRating(){
+    return 90;
+  }
 }

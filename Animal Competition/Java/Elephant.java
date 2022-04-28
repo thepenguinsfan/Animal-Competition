@@ -38,4 +38,10 @@ public class Elephant extends Animal{
   public int attackingAbilityRating(){
     return 80;
   }
+  public int smellingAbilityRating(){
+    return 75;
+  }
+  public int visionAbilityRating(){
+    return 75;
+  }
 }

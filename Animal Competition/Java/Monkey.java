@@ -38,5 +38,11 @@ public int numberOfLegs() {
   public int attackingAbilityRating(){
     return 80;
   }
+  public int smellingAbilityRating(){
+    return 60;
+  }
+  public int visionAbilityRating(){
+    return 75;
+  }
   
 }

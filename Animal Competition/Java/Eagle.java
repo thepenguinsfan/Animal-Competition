@@ -27,16 +27,21 @@ public int numberOfLegs() {
     return 100;
   }
   public int swimmingAbilityRating(){
-    return 10 ;
+    return 25 ;
   }
-
   public int runningAbilityRating(){
-    return 30;
+    return 20;
   }
    public int burrowingAbilityRating(){
     return 10;
   }
   public int attackingAbilityRating(){
-    return 88;
+    return 75;
+  }
+  public int smellingAbilityRating(){
+    return 70;
+  }
+  public int visionAbilityRating(){
+    return 95;
   }
 }

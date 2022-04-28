@@ -12,5 +12,9 @@ public abstract interface ITraits {
   public abstract int burrowingAbilityRating();
 
   public abstract int attackingAbilityRating();
+
+  public abstract int smellingAbilityRating();
+
+  public abstract int visionAbilityRating();
     
 }

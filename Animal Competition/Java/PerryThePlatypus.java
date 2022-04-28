@@ -38,6 +38,12 @@ public class PerryThePlatypus extends CoolAnimals{
   public int attackingAbilityRating(){
     return 100;
   }
+  public int smellingAbilityRating(){
+    return 100;
+  }
+  public int visionAbilityRating(){
+    return 100;
+  }
   public boolean fightsCrime(){
     return true;
   }

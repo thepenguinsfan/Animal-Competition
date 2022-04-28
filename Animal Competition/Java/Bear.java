@@ -39,6 +39,13 @@ public class Bear extends Animal{
   public int attackingAbilityRating(){
     return 90;
   }
+
+  public int smellingAbilityRating(){
+    return 90;
+  }
+  public int visionAbilityRating(){
+    return 80;
+  }
   
 }
 

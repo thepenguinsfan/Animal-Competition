@@ -23,5 +23,9 @@ public abstract class Animal implements ITraits{
   
   public abstract int attackingAbilityRating(); 
 
+  public abstract int smellingAbilityRating();
+
+  public abstract int visionAbilityRating();
+
   
 }
