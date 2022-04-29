@@ -66,6 +66,7 @@ class Game {
         // Let player 1 configure animal(will add)
 
         // Let player 2 select animal
+        
         this.show("Select the second Animal:");
         
 
@@ -80,7 +81,7 @@ class Game {
         // Let player 2 configure Animal(will add)
 
         // randomly select environment
-        
+        this.pause();
         this.show("Selecting Environment...");
         var forest = new Forest();
         var desert = new Desert();
@@ -89,8 +90,8 @@ class Game {
         environments.add(desert);
 
         int environmentNumber = (int)(Math.random() * 2);
-        
-                              
+          
+        this.pause();                      
         this.show(environments.get(environmentNumber).environmentType());
 
         // gets animal traits ready to compare
@@ -129,7 +130,7 @@ class Game {
         int animal2VisionAbility = (animals.get(animal2).visionAbilityRating());
 
         
-        
+        this.pause();
         this.show("Selecting Situation..");
         // randomly select situation based off of envrionment
         if (environmentNumber == 1){
@@ -138,7 +139,7 @@ class Game {
           
           String desertSituation1 = "The animals have to find food in the desert!";
 
-          String desertSituation2 = "The animals have to find shelter in the desert!"
+          String desertSituation2 = "The animals have to find shelter in the desert!";
 
           
           
@@ -148,10 +149,13 @@ class Game {
           desertSituations.add(desertSituation2); // desert situation 2
 
           int desertSituationNumber = (int)(Math.random() * 2);
+          this.pause();
           this.show(desertSituations.get(desertSituationNumber));
+          this.pause();
+          this.show("Begin!");
           
         // compare traits based off of situation
-        // i know its tedious and inefficient but there is not enough time to change everything 
+        // the winner in the desert is being printed twice
 
           // find water in desert
           if (desertSituationNumber == 0){
@@ -161,48 +165,42 @@ class Game {
             
 
             // compares vision ability for animals
-            int compareVision0 = this.traitSuperiority(animal1VisionAbility, animal2VisionAbility);
-            
-            if (compareVision0 > 0)
-              animal1Points++;
-            else if (compareVision0 < 0)
-              animal2Points++;
+            int visionPoints[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);         
+            animal1Points += visionPoints[0];
+            animal2Points += visionPoints[1];
               
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
-
             // compare smelling ability
-            int compareSmelling0 = this.traitSuperiority(animal1SmellingAbility, animal2SmellingAbility);
+            int smellingPoints[] = this.getPoints(animal1SmellingAbility, animal2SmellingAbility);
+            animal1Points += smellingPoints[0];
+            animal2Points += smellingPoints[1];
+            this.pause();
             
-            if (compareSmelling0 > 0)
-              animal1Points++;
-            else if (compareSmelling0 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " senses that water is nearby!");
+            } else if (animal1Points < animal2Points){
+              this.show("The " + animal2Species + " senses that water is nearby!");
+            }else{
+              this.show("The animals have not found water yet...");
+            }
             
             // compares burrowing ability for animals
-            int compareBurrowing0 = this.traitSuperiority(animal1BurrowingAbility, animal2BurrowingAbility);
-            
-            if (compareBurrowing0 > 0)
-              animal1Points++;
-            else if (compareBurrowing0 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            int burrowingPoints[] = this.getPoints(animal1BurrowingAbility, animal2BurrowingAbility);
+            animal1Points += burrowingPoints[0];
+            animal2Points += burrowingPoints[1];
 
-            
+            // declares winner based off of who has more points
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " has found water!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " has found water!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            }else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both managed to find water!");
+            }
             
             
           }
@@ -211,78 +209,56 @@ class Game {
             // compare traits Attacking Running Burrowing Vision Smelling
            
             // compare attacking
-            int compareAttacking1 = this.traitSuperiority(animal1AttackingAbility, animal2AttackingAbility);
-            
-            if (compareAttacking1 > 0)
-              animal1Points++;
-            else if (compareAttacking1 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            int attackingPoints1[] = this.getPoints(animal1AttackingAbility, animal2AttackingAbility);
+            animal1Points += attackingPoints1[0];
+            animal2Points += attackingPoints1[1];
 
             
             // compare running
-            int compareRunning1 = this.traitSuperiority(animal1RunningAbility, animal2RunningAbility);
-            
-            if (compareRunning1  > 0)
-              animal1Points++;
-            else if (compareRunning1 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            int runningPoints1[] = this.getPoints(animal1RunningAbility, animal2RunningAbility);
+            animal1Points += runningPoints1[0];
+            animal2Points += runningPoints1[1];
 
             
             // compare burrowing
-            int compareBurrowing1 = this.traitSuperiority(animal1BurrowingAbility, animal2BurrowingAbility);
+            int burrowingPoints1[] = this.getPoints(animal1BurrowingAbility, animal2BurrowingAbility);
+            animal1Points += burrowingPoints1[0];
+            animal2Points += burrowingPoints1[1]; 
             
-            if (compareBurrowing1 > 0)
-              animal1Points++;
-            else if (compareBurrowing1 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
-
+            // show progress for finding food in the desert
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " senses that food is nearby!");
+            } else if (animal1Points < animal2Points){
+              this.show("The " + animal2Species + " senses that food is nearby!");
+            }else{
+              this.show("The animals have not found any food yet...");
+            }
             
             // compare vision
-            int compareVision1 = this.traitSuperiority(animal1VisionAbility, animal2VisionAbility);
-            
-            if (compareVision1 > 0)
-              animal1Points++;
-            else if (compareVision1 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            int visionPoints1[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);
+            animal1Points += visionPoints1[0];
+            animal2Points += visionPoints1[1];
 
             
             // compare smelling
-            int compareSmelling1 = this.traitSuperiority(animal1SmellingAbility, animal2SmellingAbility);
+            int smellingPoints1[] = this.getPoints(animal1SmellingAbility, animal2SmellingAbility);
+            animal1Points += smellingPoints1[0];
+            animal2Points += smellingPoints1[1]; 
             
-            if (compareSmelling1 > 0)
-              animal1Points++;
-            else if (compareSmelling1 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+            // declares winner based off of who has more points
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " has found food!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " has found food!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            }else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both found food in the desert!");
+            }
           } 
 
             
@@ -291,49 +267,45 @@ class Game {
            
             // compare traits Burrowing Vision Flying
             // compare burrowing
-             int compareBurrowing2 = this.traitSuperiority(animal1BurrowingAbility, animal2BurrowingAbility);
-            
-            if (compareBurrowing2 > 0)
-              animal1Points++;
-            else if (compareBurrowing2 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
+             int burrowingPoints2[] = this.getPoints(animal1BurrowingAbility, animal2BurrowingAbility);
+            animal1Points += burrowingPoints2[0];
+            animal2Points += burrowingPoints2[1];
 
             
             // compare vision
-             int compareVision2 = this.traitSuperiority(animal1VisionAbility, animal2VisionAbility);
+            int visionPoints2[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);
+            animal1Points += visionPoints2[0];
+            animal2Points += visionPoints2[1];
+           
+            // show progress for shelter in the desert
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " spots some shelter in the distance!");
+            } else if (animal1Points < animal2Points){
+              this.show("The " + animal2Species + " spots some shelter in the distance!");
+            }else{
+              this.show("The animals have not found shelter yet...");
+            }
             
-            if (compareVision2 > 0)
-              animal1Points++;
-            else if (compareVision2 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
-            
-            // compare flying
-             int compareFlying2 = this.traitSuperiority(animal1FlyingAbility, animal2FlyingAbility);
-            
-            if (compareFlying2 > 0)
-              animal1Points++;
-            else if (compareVision2 < 0)
-              animal2Points++;
-              
-            else // they are equal
-            {
-              animal1Points++;
-              animal2Points++;
-            } 
-
-          }
+            //compare flying
+            int flyingPoints2[] = this.getPoints(animal1FlyingAbility, animal2FlyingAbility);
+            animal1Points += flyingPoints2[0];
+            animal2Points += flyingPoints2[1];
+          
+          // declares winner based off of who has more points
+          this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " has found shelter!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " has found shelter!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            }else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both found shelter!");
+            }
+            }
           }
           
           
@@ -355,9 +327,73 @@ class Game {
           int forestSituationNumber = (int)(Math.random() * 3);
 
           this.show(forestSituations.get(forestSituationNumber));
+
+          this.pause();
+          this.show("Begin!");
           // Find food in forest
           if (forestSituationNumber == 0){
             // compare traits Attacking Vision Smelling Running Flying Climbing Swimming
+            // compare attacking
+            int attackingPoints3[] = this.getPoints(animal1AttackingAbility, animal2AttackingAbility);
+            animal1Points += attackingPoints3[0];
+            animal2Points += attackingPoints3[1];
+            
+            // compare vision
+            int visionPoints3[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);
+            animal1Points += visionPoints3[0];
+            animal2Points += visionPoints3[1];
+            
+            //compare smelling
+            int smellingPoints3[] = this.getPoints(animal1SmellingAbility, animal2SmellingAbility);
+            animal1Points += smellingPoints3[0];
+            animal2Points += smellingPoints3[1];
+
+            
+            //compare running
+            int runningPoints3[] = this.getPoints(animal1RunningAbility, animal2RunningAbility);
+            animal1Points += runningPoints3[0];
+            animal2Points += runningPoints3[1];
+
+            
+            //compare flying
+            int flyingPoints3[] = this.getPoints(animal1FlyingAbility, animal2FlyingAbility);
+            animal1Points += flyingPoints3[0];
+            animal2Points += flyingPoints3[1];
+            
+            // update progress for food in forest
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " senses that prey is nearby!");
+            } else if (animal1Points < animal2Points){
+              this.show("The " + animal2Species + " senses that prey is nearby!");
+            }else{
+              this.show("The animals have not found any prey yet...");
+            }
+            
+            //compare climbing
+            int climbingPoints3[] = this.getPoints(animal1ClimbingAbility, animal2ClimbingAbility);
+            animal1Points += climbingPoints3[0];
+            animal2Points += climbingPoints3[1];
+
+            
+            //compare swimming
+            int swimmingPoints3[] = this.getPoints(animal1SwimmingAbility, animal2SwimmingAbility);
+            animal1Points += swimmingPoints3[0];
+            animal2Points += swimmingPoints3[1];
+
+            // declares winner based off of who has more points
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " has found prey!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " has found prey!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            }else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both found their prey!");
+            }
 
 
           }
@@ -365,10 +401,108 @@ class Game {
           else if (forestSituationNumber == 1){
             // compare traits Running Vision Climbing Burrowing Flying
 
+            // compare running
+            int runningPoints4[] = this.getPoints(animal1RunningAbility, animal2RunningAbility);
+            animal1Points += runningPoints4[0];
+            animal2Points += runningPoints4[1];
+            
+            //compare vision
+            int visionPoints4[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);
+            animal1Points += visionPoints4[0];
+            animal2Points += visionPoints4[1];
+            
+            //compare climbing
+            int climbingPoints4[] = this.getPoints(animal1ClimbingAbility, animal2ClimbingAbility);
+            animal1Points += climbingPoints4[0];
+            animal2Points += climbingPoints4[1];
+            
+            // show progress for predator in forest
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The predator has caught the trail of the " + animal2Species + "!");
+            } else if (animal1Points < animal2Points){
+              this.show("The predator has caught the trail of the " + animal1Species + "!");
+            }else{
+              this.show("The predator has not caught onto the animals yet...");
+            }
+            //compare burrowing
+            int burrowingPoints4[] = this.getPoints(animal1BurrowingAbility, animal2BurrowingAbility);
+            animal1Points += burrowingPoints4[0];
+            animal2Points += burrowingPoints4[1];
+            
+            //compare flying
+            int flyingPoints4[] = this.getPoints(animal1FlyingAbility, animal2FlyingAbility);
+            animal1Points += flyingPoints4[0];
+            animal2Points += flyingPoints4[1];
+
+
+            // declares winner based off of who has more points(predator)
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal2Species + " has been caught by the predator!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal1Species + " has been caught by the predator!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            }else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both avoided the predator!");
+            }
           }
-          // survive a flash flood in the desert
+          // survive a flash flood in the forest
           else{
             // compare traits Swimming Climbing Flying
+           
+            
+            // compare swimming
+            int swimmingPoints5[] = this.getPoints(animal1SwimmingAbility, animal2SwimmingAbility);
+            animal1Points += swimmingPoints5[0];
+            animal2Points += swimmingPoints5[1];
+            
+            //compare climbing
+            int climbingPoints5[] = this.getPoints(animal1ClimbingAbility, animal2ClimbingAbility);
+            animal1Points += climbingPoints5[0];
+            animal2Points += climbingPoints5[1];
+            
+            //compare flying
+            int flyingPoints5[] = this.getPoints(animal1FlyingAbility, animal2FlyingAbility);
+            animal1Points += flyingPoints5[0];
+            animal2Points += flyingPoints5[1];
+
+            // show progress for flood in forest
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The " + animal2Species + " is caught off guard by the flood!");
+            } else if (animal1Points < animal2Points){
+              this.show("The " + animal1Species + " is caught off guard by the flood!");
+            }else{
+              this.show("The animals are both one step ahead of the flood... ");
+            }
+            
+            //compare vision
+            int visionPoints5[] = this.getPoints(animal1VisionAbility, animal2VisionAbility);
+            animal1Points += visionPoints5[0];
+            animal2Points += visionPoints5[1];
+            
+            // compare running
+            int runningPoints5[] = this.getPoints(animal1RunningAbility, animal2RunningAbility);
+            animal1Points += runningPoints5[0];
+            animal2Points += runningPoints5[1];
+
+            // declares winner based off of who has more points
+            this.pause();
+            if (animal1Points > animal2Points){
+              this.show("The flood has swept away " + animal2Species + "!");
+              this.pause();
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The flood has swept away " + animal1Species + "!");
+              this.pause();
+              this.show("The " + animal2Species + " wins!");
+            } else{
+              this.show("The " + animal1Species + " and " + animal2Species + " have both escaped the flood!");
+            }
 
           }
         }
@@ -378,13 +512,13 @@ class Game {
         
 
       
-      
-        
+ 
+    
       
 
       
     }
-    }
+    
 
 
 
@@ -404,6 +538,29 @@ int traitSuperiority(int animal1Ability, int animal2Ability){
   return 0;
 
   }
+// determines which animal gets a point when comparing traits
+// if first trait > second trait, animal 1 is given a point and animal 2 is given nothing, shown by {1, 0}
+// if second trait > first trait, animal 2 is given a point and animal 1 is given nothing, shown by {0, 1}
+// if first trait = second trait, both animals are given a point, shown by {1, 1}
+int[] getPoints(int animal1Ability, int animal2Ability) {
+            int compare = this.traitSuperiority(animal1Ability, animal2Ability);
+            
+            if (compare > 0)
+              return new int[]{1, 0};
+            if (compare < 0)
+              return new int[]{0 , 1};
+            return new int[]{1, 1};
+}
+  // function to pause the program for 1 second
+  void pause() {
+    this.pause(1000);
+  }
 
-
+  void pause(int milliseconds) {
+    try {
+      Thread.sleep(milliseconds);
+    } catch (Exception e) {
+      this.show(e.toString());
+    }
+  }
 }
