@@ -178,7 +178,7 @@ class Game {
             if (animal1Points > animal2Points){
               this.show("The " + animal1Species + " senses that water is nearby!");
             } else if (animal1Points < animal2Points){
-              this.show("The " + animal1Species + " senses that water is nearby!");
+              this.show("The " + animal2Species + " senses that water is nearby!");
             }else{
               this.show("The animals have not found water yet...");
             }
@@ -195,7 +195,7 @@ class Game {
               this.pause();
               this.show("The " + animal1Species + " wins!");
             } else if(animal1Points < animal2Points){
-              this.show("The " + animal1Species + " has found water!");
+              this.show("The " + animal2Species + " has found water!");
               this.pause();
               this.show("The " + animal2Species + " wins!");
             }
@@ -228,7 +228,7 @@ class Game {
             if (animal1Points > animal2Points){
               this.show("The " + animal1Species + " senses that food is nearby!");
             } else if (animal1Points < animal2Points){
-              this.show("The " + animal1Species + " senses that food is nearby!");
+              this.show("The " + animal2Species + " senses that food is nearby!");
             }else{
               this.show("The animals have not found any food yet...");
             }
@@ -251,7 +251,7 @@ class Game {
               this.pause();
               this.show("The " + animal1Species + " wins!");
             } else if(animal1Points < animal2Points){
-              this.show("The " + animal1Species + " has found food!");
+              this.show("The " + animal2Species + " has found food!");
               this.pause();
               this.show("The " + animal2Species + " wins!");
             }
@@ -276,11 +276,11 @@ class Game {
             // show progress for shelter in the desert
             this.pause();
             if (animal1Points > animal2Points){
-              this.show("The " + animal1Species + " spots some shelter in the distance");
+              this.show("The " + animal1Species + " spots some shelter in the distance!");
             } else if (animal1Points < animal2Points){
-              this.show("The " + animal1Species + " senses that food is nearby!");
+              this.show("The " + animal2Species + " spots some shelter in the distance!");
             }else{
-              this.show("The animals have not found any food yet...");
+              this.show("The animals have not found shelter yet...");
             }
             
             //compare flying
@@ -291,11 +291,11 @@ class Game {
           // declares winner based off of who has more points
           this.pause();
             if (animal1Points > animal2Points){
-              this.show("The " + animal1Species + " has found water!");
+              this.show("The " + animal1Species + " has found shelter!");
               this.pause();
               this.show("The " + animal1Species + " wins!");
             } else if(animal1Points < animal2Points){
-              this.show("The " + animal1Species + " has found water!");
+              this.show("The " + animal2Species + " has found shelter!");
               this.pause();
               this.show("The " + animal2Species + " wins!");
             }
@@ -358,7 +358,7 @@ class Game {
             if (animal1Points > animal2Points){
               this.show("The " + animal1Species + " senses that prey is nearby!");
             } else if (animal1Points < animal2Points){
-              this.show("The " + animal1Species + " senses that prey is nearby!");
+              this.show("The " + animal2Species + " senses that prey is nearby!");
             }else{
               this.show("The animals have not found any prey yet...");
             }
@@ -381,7 +381,7 @@ class Game {
               this.pause();
               this.show("The " + animal1Species + " wins!");
             } else if(animal1Points < animal2Points){
-              this.show("The " + animal1Species + " has found prey!");
+              this.show("The " + animal2Species + " has found prey!");
               this.pause();
               this.show("The " + animal2Species + " wins!");
             }
