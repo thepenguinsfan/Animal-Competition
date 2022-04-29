@@ -138,7 +138,7 @@ class Game {
           
           String desertSituation1 = "The animals have to find food in the desert!";
 
-          String desertSituation2 = "The animals have to find shelter in the desert!"
+          String desertSituation2 = "The animals have to find shelter in the desert!";
 
           
           
@@ -202,7 +202,12 @@ class Game {
               animal2Points++;
             } 
 
-            
+            // declares winner based off of who has more points
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " wins!");
+            }
             
             
           }
@@ -283,6 +288,12 @@ class Game {
               animal1Points++;
               animal2Points++;
             } 
+            // declares winner based off of who has more points
+             if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " wins!");
+            }
           } 
 
             
@@ -303,8 +314,8 @@ class Game {
               animal1Points++;
               animal2Points++;
             } 
-
             
+        
             // compare vision
              int compareVision2 = this.traitSuperiority(animal1VisionAbility, animal2VisionAbility);
             
@@ -334,6 +345,12 @@ class Game {
             } 
 
           }
+          // declares winner based off of who has more points
+            if (animal1Points > animal2Points){
+              this.show("The " + animal1Species + " wins!");
+            } else if(animal1Points < animal2Points){
+              this.show("The " + animal2Species + " wins!");
+            }
           }
           
           
@@ -366,7 +383,7 @@ class Game {
             // compare traits Running Vision Climbing Burrowing Flying
 
           }
-          // survive a flash flood in the desert
+          // survive a flash flood in the forest
           else{
             // compare traits Swimming Climbing Flying
 
@@ -378,8 +395,8 @@ class Game {
         
 
       
-      
-        
+ 
+    
       
 
       
@@ -388,7 +405,7 @@ class Game {
 
 
 
-
+// error
 void show(String text){
   System.out.println(text);
 }
@@ -406,4 +423,3 @@ int traitSuperiority(int animal1Ability, int animal2Ability){
   }
 
 
-}
